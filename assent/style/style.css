@@ -1,0 +1,418 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color:#ffffff;
+}
+
+
+/* --------inicio del navbar---------------------*/
+
+
+.navbar-flex{
+    background-color: #fff;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    height: 6vb;
+    width: 100%;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color:#2b364a ;
+}
+.navbar_menu{
+    display: flex;
+}
+.navbar_icons i{
+    font-size: medium;
+    color:#2b364a;
+}
+.navbar_icons li:first-child{
+    margin-right: 30px;
+}
+/* --------BARRA LATERAL solicitada, pero CON HOVER---------------------*/
+
+
+.navbar_menu_barra-lateral{
+    height: 700px;
+    width: 300px;
+    background-color: #6e727ec9;
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease, display 1s ease;
+    position: fixed;
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.navbar_menu_barra-lateral ul{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color:#2b364a;
+}
+.navbar_menu_barra-lateral ul li{
+    padding: 20px;
+    margin: 20px;
+    color: #ffffff;
+}
+.navbar_menu ul{
+    display: flex;
+    gap: 20px;
+}
+.navbar_icons{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar_icons ul{
+    display: flex;
+    gap: 10px;
+}
+.navbar_menu:hover .navbar_menu_barra-lateral {
+    display: block; 
+    opacity: 1;
+}
+
+
+/* --------inicio del header---------------------*/
+
+
+.principal_img{
+    background-image: url(../img/PRINCIPAL/imagen\ incio.png);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.principal_img_boxes{
+    display: flex;
+    margin-right: 40px;
+    position: absolute;
+    bottom:100px;
+    right: 100px;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* --------Más Vendidos---------------------*/
+
+
+.mas_vendidos{
+    margin-top: 80px;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color:#2b364a;
+}
+.mas_vendidos h2{
+    font-size: large;
+    padding: 0;
+    margin: 3px;
+}
+.mas_vendidos_items{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 25vh;
+    margin: 50px;
+}
+.mas_vendidos_items_libro{
+    position: relative;
+    overflow: hidden;
+}
+.mas_vendidos_items_libro img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* --------etiqueta con hover Más Vendidos---------------------*/
+
+
+.mas_vendidos_items_libro-etiquetas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b364ae4;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.mas_vendidos_items_libro-etiquetas h2,
+.mas_vendidos_items_libro-etiquetas h3,
+.mas_vendidos_items_libro-etiquetas h4 {
+    margin: 5px 0;
+}
+.mas_vendidos_items_libro-etiquetas h4 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.mas_vendidos_items_libro:hover .mas_vendidos_items_libro-etiquetas{
+    opacity: 1;
+}
+
+
+/* --------promo---------------------*/
+
+
+.promo{
+    background-image:url(../img/promo/descuento.webp);
+    height: 30vh;
+    margin-top: 10rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.5s;
+        box-shadow:5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.promo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    text-decoration: none;
+    opacity: 0;
+    }
+
+
+/* --------Promo pequeño hover---------------------*/
+
+
+.promo:hover{
+transform: scale(0.98)}
+
+
+/* --------pre ventas---------------------*/
+
+
+.preventas{
+    margin-top: 10vh;
+}
+.preventas_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:auto auto;
+    padding: 0;
+    gap: 25px;
+}
+.preventas_grid li:first-child {
+    background-image: url(../img/preventas/Mesa_de_trabajo_21_3.webp);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    transition: transform 0.5s ease;
+}
+.preventas_grid_item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    text-decoration: none;
+    opacity: 0;
+}
+.preventas_grid_item{
+    position: relative;
+    overflow: hidden;
+}
+.preventas_grid_item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* --------etiqueta con hover PREVENTAS---------------------*/
+
+
+.preventas_grid li:first-child:hover{
+    transform: scale(0.99);
+}
+
+.preventas_grid_item_libro-etiquetas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b364ae4;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.preventas_grid_item_libro-etiquetas h2,
+.preventas_grid_item_libro-etiquetas h3,
+.preventas_grid_item_libro-etiquetas h4 {
+    margin: 5px 0;
+}
+.preventas_grid_item_libro-etiquetas h4 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.preventas_grid_item:hover .preventas_grid_item_libro-etiquetas{
+    opacity: 1;}
+
+
+/* --------promo 2--------------------*/
+
+
+.promo2{
+    margin-top: 50px;
+}
+
+.promo2_flex{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.promo2_flex-items img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------tematicas--------------------*/
+.tematicas{
+    margin-top: 80px;
+}
+.tematicas_grid{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+.tematicas_grid-items{
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.tematicas_grid-items:first-child{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url(../img/tematicas/autoreschilenos.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.tematicas_grid-items:nth-child(2){
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url(../img/tematicas/cambioclimatico.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tematicas_grid-items:nth-child(3){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(../img/tematicas/comics.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tematicas_grid-items:nth-child(4){
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(../img/tematicas/estuches.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tematicas_grid-items:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url(../img/tematicas/Portada-Tema_ticas-HOLOCAUSTO.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tematicas_grid-items:nth-child(6){
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-image: url(../img/tematicas/Portada-Tema_ticas-Libro-pantalla.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* --------footer--------------------*/
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    width: auto;
+    height: 30px;
+    margin-top: 30px;
+    background-color: #d8d8d8;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color:#2b364a;
+    border-radius: 15px;
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.5) ;
+}
